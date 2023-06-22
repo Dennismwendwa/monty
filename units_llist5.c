@@ -16,7 +16,7 @@ void push_chck(char **tok, unsigned int ln)
 	{
 		if (_digit(tok[1]) == 0)
 		{
-			k = atoi(tok[1]);
+			n = atoi(tok[1]);
 		}
 		else
 		{
@@ -39,7 +39,7 @@ int _digit(char *string)
 {
 	unsigned long l = 0;
 
-	if (string[0] == "-")
+	if (string[0] == '-')
 	{
 		l++;
 	}
@@ -54,7 +54,7 @@ int _digit(char *string)
 
 	}
 
-	if (string[0] == "-" && strlen(string) == 1)
+	if (string[0] == '-' && strlen(string) == 1)
 	{
 		return (1);
 	}
@@ -69,7 +69,7 @@ int _digit(char *string)
  * Return:- Always 0
  */
 
-void ppo_print(stacl_t **head, unsigned int lin_num)
+void ppo_print(stack_t **head, unsigned int lin_num)
 {
 	if (*head == NULL)
 	{

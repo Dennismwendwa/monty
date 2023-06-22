@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 		error_handle(2, cont, argv[1]);
-	tok = NULL;
+	tokens = NULL;
 	while (h == 1)
 	{
 		lin = NULL;
@@ -87,17 +87,17 @@ int main(int argc, char **argv)
 		}
 		if (l != -1)
 		{
-			tok = parse_line(lin);
-			func = getop(tok[0], cont);
-			if (tok[0])
-				push_chck(tok, cont);
-			func(&list, cont), free(tok);
+			tokens = persing_lin(lin);
+			func = gett_op(tokens[0], cont);
+			if (tokens[0])
+				push_chck(tokens, cont);
+			func(&list, cont), free(tokens);
 		}
 		else
 			h = 0;
 		cont++;
 	}
 	fclose(fp);
-	freeing_lst(&tok_get), freeing_stack(list);
+	freeing_lst(&tok_get), stack_free(list);
 	return (0);
 }

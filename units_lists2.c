@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pp_push - add element to list
+ * ppo_push - add element to list
  * @lin_num:- number frm user
  * @list_add:- number lin
  * Return: Always 0

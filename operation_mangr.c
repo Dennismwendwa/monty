@@ -7,14 +7,14 @@
  * Return:- Always 0
  */
 
-void (*gett_op(char *k, unsigned int cont))((stack_t **stack, unsigned int h))
+void (*gett_op(char *k, unsigned int cont))(stack_t **stack, unsigned int h)
 {
 	int j;
 
 	instruction_t ops[] = {
 		{"push", ppo_push},
 		{"pall", ppo_pall},
-		{"pint", ppo_pint},
+		{"pint", ppo_print},
 		{"pop", ppo_pop},
 		{"swap", ppo_swap},
 		{"add", ppo_add},

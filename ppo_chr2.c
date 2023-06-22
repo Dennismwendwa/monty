@@ -12,7 +12,8 @@ void ppo_pstr(stack_t **head, unsigned int lin_num)
 	stack_t *today;
 
 	(void)lin_num;
-
+	
+	today = *head;
 	while (today)
 	{
 		if (today->n > 127 || today->n < 32)

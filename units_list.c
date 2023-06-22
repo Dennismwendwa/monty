@@ -11,7 +11,7 @@ void ppo_pall(stack_t **head, unsigned int lin_num)
 {
 	int l = 0;
 
-	stack_t *now = lst;
+	stack_t *now = list;
 
 	(void)lin_num;
 	(void)head;

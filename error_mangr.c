@@ -57,9 +57,9 @@ void error_handle(int flg, unsigned int lin_num, char *nme)
 		mini_error_handle(flg, lin_num);
 	}
 
-	list_free(&tok_get);
+	freeing_lst(&tok_get);
 	stack_free(list);
-	free(token);
+	free(tokens);
 
 	if (flg != 2)
 	{
@@ -107,9 +107,9 @@ void mini_error_handle(int flg, unsigned int lin_num)
 		fprintf(stderr, "USAGE: monty file\n");
 	}
 
-	list_free(&tok_get);
+	freeing_lst(&tok_get);
 	stack_free(list);
-	free(token);
+	free(tokens);
 
 	if (flg != 0)
 	{
