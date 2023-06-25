@@ -93,6 +93,6 @@ void *_realloc(void *pointer, unsigned int old, unsigned int newp);
 void error_handle(int flg, unsigned int lin_num, char *nme);
 
 void ppo_rotl(stack_t **start, unsigned int lin_num);
-void ppo_rotr(stack_t **start, unsigned int lin_num)
+void ppo_rotr(stack_t **start, unsigned int lin_num);
 
 #endif

@@ -12,7 +12,9 @@ void ppo_rotr(stack_t **start, unsigned int lin_num)
 	stack_t *pu;
 	stack_t *down;
 
-	(void) (!start || !*start || !(*start)->next)
+	(void) lin_num;
+
+	if (!start || !*start || !(*start)->next)
 		return;
 
 	down = *start;
@@ -21,8 +23,8 @@ void ppo_rotr(stack_t **start, unsigned int lin_num)
 		down = down->next;
 	}
 
-	pu = pu->prev;
-	down->down = *start;
+	pu = down->prev;
+	down->next = *start;
 	down->prev = NULL;
 	pu->next = NULL;
 
