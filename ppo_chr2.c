@@ -12,7 +12,7 @@ void ppo_pstr(stack_t **head, unsigned int lin_num)
 	stack_t *today;
 
 	(void)lin_num;
-	
+
 	today = *head;
 	while (today)
 	{

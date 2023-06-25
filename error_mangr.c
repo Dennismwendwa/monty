@@ -18,7 +18,7 @@ void error_handle(int flg, unsigned int lin_num, char *nme)
 	}
 	else if (flg == 2)
 	{
-		fprintf(stderr, "Error: Cant open file %s\n", nme);
+		fprintf(stderr, "Error: Can't open file %s\n", nme);
 	}
 	else if (flg == 3)
 	{
@@ -26,7 +26,7 @@ void error_handle(int flg, unsigned int lin_num, char *nme)
 	}
 	else if (flg == 4)
 	{
-		fprintf(stderr, "L%u: push integer\n", lin_num);
+		fprintf(stderr, "L%u: usage: push integer\n", lin_num);
 	}
 	else if (flg == 5)
 	{
@@ -80,7 +80,7 @@ void mini_error_handle(int flg, unsigned int lin_num)
 {
 	if (flg == 11)
 	{
-		fprintf(stderr, "L%u: div by 0\n", lin_num);
+		fprintf(stderr, "L%u: division by zero\n", lin_num);
 	}
 	else if (flg == 12)
 	{
@@ -92,7 +92,7 @@ void mini_error_handle(int flg, unsigned int lin_num)
 	}
 	else if (flg == 14)
 	{
-		fprintf(stderr, "L%u: div by 0\n", lin_num);
+		fprintf(stderr, "L%u: division by zero\n", lin_num);
 	}
 	else if (flg == 15)
 	{
