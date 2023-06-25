@@ -25,6 +25,8 @@ void (*gett_op(char *k, unsigned int cont))(stack_t **stack, unsigned int h)
 		{"mod", ppo_mod},
 		{"pchar", ppo_pchar},
 		{"pstr", ppo_pstr},
+		{"rotl", ppo_rotl},
+		{"rotr", ppo_rotr},
 		{NULL, NULL}
 	};
 
